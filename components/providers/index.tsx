@@ -1,7 +1,7 @@
 import { ThemeProvider } from "next-themes";
 import { cookies } from "next/headers";
 import { SidebarProvider } from "../ui/sidebar";
-import { AppSidebar } from "../app-sidebar";
+import AppSidebar from "../app-sidebar";
 import { AppSidebarInset } from "./app-sidebar-inset";
 
 type ProviderProps = {
@@ -29,9 +29,10 @@ export async function Providers({ children }: ProviderProps) {
       disableTransitionOnChange
     >
       <SidebarProvider defaultOpen={defaultOpen} defaultWidth={sidebarWidth}>
-        <AppSidebar>
-          <AppSidebarInset>{children}</AppSidebarInset>
-        </AppSidebar>
+        <AppSidebarInset>
+          <AppSidebar />
+          {children}
+        </AppSidebarInset>
       </SidebarProvider>
     </ThemeProvider>
   );
