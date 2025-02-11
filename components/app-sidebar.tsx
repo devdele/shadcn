@@ -2,10 +2,17 @@
 
 import * as React from "react";
 import { useState } from "react";
-import { House, Settings2, LucideIcon, FileText } from "lucide-react";
+import {
+  House,
+  Settings2,
+  LucideIcon,
+  FileText,
+  Newspaper,
+} from "lucide-react";
 import Settings from "@/app/Pages/settings";
 import CostumerData from "@/app/Pages/costumer-data";
 import Home from "@/app/Pages/home";
+import Blogs from "@/app/Pages/blogs";
 
 import {
   Collapsible,
@@ -51,6 +58,11 @@ const data: NavData = {
       title: "Settings",
       Component: Settings,
       icon: Settings2,
+    },
+    {
+      title: "Blogs",
+      Component: Blogs,
+      icon: Newspaper,
     },
   ],
 };
